@@ -41,4 +41,18 @@ Se usan para sustituir a los mecánicos simulando su funcionamiento y evitando l
 
 ![](https://i0.wp.com/www.ingmecafenix.com/wp-content/uploads/2017/04/Potenciometro-digital.webp?resize=683%2C384&ssl=1)
 
+### Codigo de prueba
+
+```python
+from machine import ADC
+import utime
+
+adc = ADC(2)
+
+while True:
+  pot = adc.read_u16()
+  print(pot)
+  utime.sleep_ms(200)
+```
+
 # Daniel Garcia Salas Daniel Alberto
